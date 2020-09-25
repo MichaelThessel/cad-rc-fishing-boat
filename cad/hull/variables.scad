@@ -1,17 +1,17 @@
 // Hull
-hullLength = 4000;
+hullLength = 400;
 
 // Nose
-noseLength = 1000;
-noseWidth = 600;
+noseLength = 100;
+noseWidth = 60;
 
-noseTopThickness = 20;
-noseTopOffsetZ = 100;
-noseTopEndOffset = 200;
+noseTopThickness = 5;
+noseTopOffsetZ = 60;
+noseTopEndOffset = 20;
 
 // Higher means thicker
-noseTopSharpnessFactor = 10;
-noseBotttomSharpnessFactor = 10;
+noseTopSharpnessFactor = 4;
+noseBotttomSharpnessFactor = 3;
 
 noseTopThicknessFactor = 1;
 noseBottomThicknessFactor = 3;

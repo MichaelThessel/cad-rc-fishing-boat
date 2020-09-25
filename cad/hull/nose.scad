@@ -1,12 +1,9 @@
 include <variables.scad>
 
 module nose() {
-    difference() {
-        hull() {
-            noseTop();
-            noseBottom();
-        }
-        noseTopLimit();
+    hull() {
+        noseTop();
+        noseBottom();
     }
 }
 nose();
@@ -16,7 +13,7 @@ module noseTop() {
     function parabolaTop(x, ml) = parabolaTopFunc(x) > ml ? ml : parabolaTopFunc(x);
 
     points = [
-        for (x = [-noseWidth / 2:noseWidth]) [x, parabolaTop(x, noseLength - noseTopEndOffset)],
+        for (x = [-noseWidth / 2:noseWidth / 2]) [x, parabolaTop(x, noseLength - noseTopEndOffset)],
     ];
 
     hull() {
