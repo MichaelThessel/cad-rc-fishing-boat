@@ -11,7 +11,7 @@ module hullInner() {
     }
 }
 
-module fullhull() {
+module fullHull() {
     translate([0, hullThickness, 0])
     difference() {
         minkowski() {
@@ -22,13 +22,20 @@ module fullhull() {
     }
 }
 
-module leftHull() {
-    fullhull();
+module cutout() {
+    translate([
+        -hullCutoutWidth / 2,
+        (hullLength - hullCutoutHeight) / 2,
+        noseTopOffsetZ + noseTopThickness - DIFFERENCE_FIX
+    ])
+    cube([hullCutoutWidth, hullCutoutHeight, hullThickness + DIFFERENCE_FIX_2]);
 }
 
-module rightHull() {
-    fullhull();
+module openHull() {
+    difference() {
+        fullHull();
+        cutout();
+    }
 }
 
-translate ([-hullSpacing, 0, 0]) leftHull();
-translate ([hullSpacing, 0, 0]) rightHull();
+openHull();

@@ -1,7 +1,14 @@
+// General
+DIFFERENCE_FIX = 0.1;
+DIFFERENCE_FIX_NEGATIVE = -1 * DIFFERENCE_FIX;
+DIFFERENCE_FIX_2 = 2 * DIFFERENCE_FIX;
+
 // Hull
 hullThickness = 5;
 hullLength = 400 - hullThickness * 2;
 hullSpacing = 100;
+hullCutoutWidth = 40;
+hullCutoutHeight = 150;
 
 // Nose
 noseLength = 100;
