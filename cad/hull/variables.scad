@@ -4,7 +4,7 @@ DIFFERENCE_FIX_NEGATIVE = -1 * DIFFERENCE_FIX;
 DIFFERENCE_FIX_2 = 2 * DIFFERENCE_FIX;
 
 // Hull
-hullThickness = 5;
+hullThickness = 3;
 hullLength = 400 - hullThickness * 2;
 hullSpacing = 100;
 hullCutoutWidth = 40;

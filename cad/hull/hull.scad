@@ -16,7 +16,7 @@ module fullHull() {
     difference() {
         minkowski() {
             hullInner();
-            sphere(r = 5);
+            sphere(r = hullThickness);
         }
         hullInner();
     }
