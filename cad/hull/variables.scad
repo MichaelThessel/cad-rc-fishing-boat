@@ -1,11 +1,13 @@
 // Hull
-hullLength = 400;
+hullThickness = 5;
+hullLength = 400 - hullThickness * 2;
+hullSpacing = 100;
 
 // Nose
 noseLength = 100;
-noseWidth = 60;
+noseWidth = 60 - hullThickness * 2;
 
-noseTopThickness = 5;
+noseTopThickness = 1;
 noseTopOffsetZ = 60;
 noseTopEndOffset = 20;
 
