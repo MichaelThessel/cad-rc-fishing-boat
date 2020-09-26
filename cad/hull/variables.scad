@@ -5,14 +5,14 @@ DIFFERENCE_FIX_2 = 2 * DIFFERENCE_FIX;
 
 // Hull
 hullThickness = 3;
-hullLength = 400 - hullThickness * 2;
+hullLength = 500 - hullThickness * 2;
 hullSpacing = 100;
-hullCutoutWidth = 40;
+hullCutoutWidth = 46;
 hullCutoutHeight = 150;
 
 // Nose
 noseLength = 100;
-noseWidth = 60 - hullThickness * 2;
+noseWidth = 70 - hullThickness * 2;
 
 noseTopThickness = 1;
 noseTopOffsetZ = 60;
