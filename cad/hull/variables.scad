@@ -36,7 +36,7 @@ hullMountOffsetY = 100;
 // Rod Connectors
 rodConnectorWidth = 30;
 rodConnectorRadius = 15;
-rodConnectorTopOffset = 2;
+rodConnectorTopOffset = 3;
 rodConnectorOffsetX = 30;
 
 // Lid

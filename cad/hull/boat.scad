@@ -6,6 +6,7 @@ use <rod_connector.scad>
 // TODO
 // Raise hull cutout a bit
 // Add locks to lids
+// Add holes for connector screws (adds material there)
 
 // ##########################################//
 // Hulls

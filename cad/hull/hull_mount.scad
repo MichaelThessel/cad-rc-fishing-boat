@@ -9,18 +9,6 @@ module hullMount() {
         rotate([90, 0, 0])
         cylinder(h = hullMountDepth + DIFFERENCE_FIX_2, r = hullMountHole);
     }
-
-    translate([hullMountWidth - hullMountPinOffset, hullMountPinRadius + hullMountPinOffset, -hullThickness])
-    cylinder(h = hullThickness, r = hullMountPinRadius);
-
-    translate([hullMountWidth - hullMountPinOffset,  hullMountDepth - hullMountPinRadius - hullMountPinOffset, -hullThickness])
-    cylinder(h = hullThickness, r = hullMountPinRadius);
-
-    translate([-hullMountWidth + hullMountPinOffset, hullMountPinRadius + hullMountPinOffset, -hullThickness])
-    cylinder(h = hullThickness, r = hullMountPinRadius);
-
-    translate([-hullMountWidth + hullMountPinOffset,  hullMountDepth - hullMountPinRadius - hullMountPinOffset, -hullThickness])
-    cylinder(h = hullThickness, r = hullMountPinRadius);
 }
 
 module hullMountBody() {
