@@ -64,3 +64,7 @@ motorMountMountOffsetX = 20;
 motorMountSupportHeight = 10;
 motorMountSupportExtensionY = 30;
 motorMountOffsetY = 300;
+motorMountRudderSupportHeight = 5;
+motorMountRudderSupportWidth = 10;
+motorMountRudderSupportExtensionY = 20;
+

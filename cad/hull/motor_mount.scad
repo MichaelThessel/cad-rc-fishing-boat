@@ -37,6 +37,15 @@ module motorMountSupport() {
     ],center = true);
 }
 
+// Additional support that holds the top of the rudder
+module motorMountRudderSupport() {
+    cube([
+        motorMountRudderSupportWidth,
+        motorMountMotorDepth + motorMountRudderSupportExtensionY,
+        motorMountRudderSupportHeight
+    ],center = true);
+}
+
 // Calculate the Z offset for the supports that mount to the rods (dependent from
 // distance from x)
 function motorMountMountOffsetZ(x) = sqrt(pow(motorMountMotorRadius, 2) + pow(x, 2));
@@ -61,6 +70,14 @@ module motorMount() {
         -motorMountMountOffsetZ(0) - motorMountSupportHeight / 2
     ])
     motorMountSupport();
+
+    // Top support for rudder
+    translate([
+        0,
+        motorMountRudderSupportExtensionY / 2,
+        motorMountMountOffsetZ(0) + motorMountRudderSupportHeight / 2
+    ])
+    motorMountRudderSupport();
 }
 
 motorMount();
