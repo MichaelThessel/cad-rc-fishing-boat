@@ -29,8 +29,6 @@ hullMountHole = 8.5;
 hullMountHeight = 30;
 hullMountWidth = 30;
 hullMountDepth = 50;
-hullMountPinRadius = 5;
-hullMountPinOffset = 10;
 hullMountOffsetY = 100;
 
 // Rod Connectors
