@@ -8,7 +8,7 @@ module rodConnector() {
             cylinder(h = rodConnectorWidth, r = rodConnectorRadius, center = true);
 
             // Upper cylinder
-            translate([0, 0 , rodConnectorRadius - rodConnectorTopOffset])
+            translate([0, 0 , rodConnectorRadius + rodConnectorTopOffset])
             rotate([90, 0, 0])
             cylinder(h = rodConnectorWidth, r = rodConnectorRadius, center = true);
         }
@@ -18,7 +18,7 @@ module rodConnector() {
         cylinder(h = rodConnectorWidth + DIFFERENCE_FIX_2, r = hullMountHole, center = true);
 
         // Upper cutout
-        translate([0, 0 , rodConnectorRadius - rodConnectorTopOffset])
+        translate([0, 0 , rodConnectorRadius + rodConnectorTopOffset])
         rotate([90, 0, 0])
         cylinder(h = rodConnectorWidth + DIFFERENCE_FIX_2, r = hullMountHole, center = true);
     }
