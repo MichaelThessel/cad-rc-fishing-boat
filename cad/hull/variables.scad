@@ -5,10 +5,6 @@ DIFFERENCE_FIX_2 = 2 * DIFFERENCE_FIX;
 
 // Hull
 hullThickness = 3;
-hullLength = 500 - hullThickness * 2;
-hullSpacing = 100;
-hullCutoutWidth = 46;
-hullCutoutHeight = 150;
 
 // Nose
 noseLength = 100;
@@ -18,9 +14,23 @@ noseTopThickness = 1;
 noseTopOffsetZ = 60;
 noseTopEndOffset = 20;
 
+// Hull
+hullLength = 500 - hullThickness * 2;
+hullSpacing = 100;
+hullCutoutWidth = 46;
+hullCutoutHeight = 150;
+hullHeight = noseTopOffsetZ + noseTopThickness + hullThickness;
+
 // Higher means thicker
 noseTopSharpnessFactor = 4;
 noseBotttomSharpnessFactor = 3;
 
 noseTopThicknessFactor = 1;
 noseBottomThicknessFactor = 3;
+
+// Hull Mounts
+hullMountHole = 8.5;
+hullMountHeight = 30;
+hullMountWidth = 30;
+hullMountDepth = 50;
+hullMountOffsetY = 100;

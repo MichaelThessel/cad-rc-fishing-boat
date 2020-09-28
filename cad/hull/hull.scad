@@ -1,6 +1,7 @@
 include <variables.scad>
 
 use <nose.scad>
+use <hull_mount.scad>
 
 $fn = 50;
 
@@ -32,6 +33,14 @@ module cutout() {
 }
 
 module openHull() {
+    translate([hullMountDepth / 2, hullMountOffsetY, hullHeight])
+    rotate([0, 0, 90])
+    hullMount();
+
+    translate([hullMountDepth / 2, hullLength - hullMountOffsetY, hullHeight])
+    rotate([0, 0, 90])
+    hullMount();
+
     difference() {
         fullHull();
         cutout();
