@@ -2,6 +2,7 @@ include <variables.scad>
 
 use <hull.scad>
 use <rod_connector.scad>
+use <lid.scad>
 
 // TODO
 // Raise hull cutout a bit
@@ -12,18 +13,33 @@ use <rod_connector.scad>
 // Hulls
 // ##########################################//
 
+// Hull with lid
+module liddedHull() {
+    openHull();
+
+    // Lid
+    translate([
+        -hullCutoutWidth / 2 - lidLip,
+        (hullLength - hullCutoutHeight) / 2 - lidLip,
+        noseTopOffsetZ + noseTopThickness + lidThickness
+    ])
+    color([0, 1, 1, 0.3])
+    lid();
+}
+
 // Left boat hull
 module leftHull() {
-    openHull();
+    liddedHull();
 }
 
 // Right hull
 module rightHull() {
-    openHull();
+    liddedHull();
 }
 
 translate ([-hullSpacing, 0, 0]) leftHull();
 translate ([hullSpacing, 0, 0]) rightHull();
+
 
 // ##########################################//
 // Connector rods between hulls

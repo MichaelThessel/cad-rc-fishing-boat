@@ -2,7 +2,6 @@ include <variables.scad>
 
 use <nose.scad>
 use <hull_mount.scad>
-use <lid.scad>
 
 $fn = 50;
 
@@ -52,15 +51,6 @@ module openHull() {
         fullHull();
         cutout();
     }
-
-    // Lid
-    translate([
-        -hullCutoutWidth / 2 - lidLip,
-        (hullLength - hullCutoutHeight) / 2 - lidLip,
-        noseTopOffsetZ + noseTopThickness + lidThickness
-    ])
-    color([0, 0, 1, 0.3])
-    lid();
 }
 
 openHull();
