@@ -37,8 +37,8 @@ module rightHull() {
     liddedHull();
 }
 
-translate ([-hullSpacing, 0, 0]) leftHull();
-translate ([hullSpacing, 0, 0]) rightHull();
+translate([-hullSpacing, 0, 0]) leftHull();
+translate([hullSpacing, 0, 0]) rightHull();
 
 
 // ##########################################//
@@ -69,12 +69,12 @@ module motorRod() {
 }
 
 // Motor rod left
-translate([-rodConnectorOffsetX, hullLength / 2, hullHeight + rodConnectorRadius * 2])
+translate([-rodConnectorOffsetX, hullLength / 2, hullHeight + rodConnectorRadius * 2 + rodConnectorTopOffset])
 rotate([90, 0, 0])
 motorRod();
 
 // Motor rod right
-translate([rodConnectorOffsetX, hullLength / 2, hullHeight + rodConnectorRadius * 2])
+translate([rodConnectorOffsetX, hullLength / 2, hullHeight + rodConnectorRadius * 2 + rodConnectorTopOffset])
 rotate([90, 0, 0])
 motorRod();
 
