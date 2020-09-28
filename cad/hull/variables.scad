@@ -52,6 +52,9 @@ rodConnectorTopOffset = 3;
 lidLip = 5;
 lidThickness = 3;
 lidGap = 0.4;
+lidText = "+1 555 123 1234";
+lidTextOffsetX = 28;
+lidTextOffsetY = 20;
 
 // ##########################################//
 // Motor mount

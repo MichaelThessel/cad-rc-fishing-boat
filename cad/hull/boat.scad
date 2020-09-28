@@ -10,7 +10,6 @@ use <motor_mount_rudder.scad>
 // Raise hull cutout a bit
 // Add locks to lids
 // Add holes for connector screws (adds material there)
-// Add phone number to lids
 
 // ##########################################//
 // Hulls
