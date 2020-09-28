@@ -71,3 +71,11 @@ motorMountRudderSupportHeight = 5;
 motorMountRudderSupportWidth = 10;
 motorMountRudderSupportExtensionY = 20;
 
+
+// ##########################################//
+// Rudder
+// ##########################################//
+rudderHeight = motorMountMotorRadius * 2 - 10;
+rudderWidth = 60;
+rudderThickness = 3;
+rudderMountTopHeight = motorMountRudderSupportHeight + 1;
