@@ -38,3 +38,8 @@ rodConnectorWidth = 30;
 rodConnectorRadius = 15;
 rodConnectorTopOffset = 2;
 rodConnectorOffsetX = 30;
+
+// Lid
+lidLip = 5;
+lidThickness = 3;
+lidGap = 0.4;

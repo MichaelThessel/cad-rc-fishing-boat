@@ -3,6 +3,9 @@ include <variables.scad>
 use <hull.scad>
 use <rod_connector.scad>
 
+// TODO
+// Raise hull cutout a bit
+// Add locks to lids
 
 // ##########################################//
 // Hulls
