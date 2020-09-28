@@ -3,6 +3,8 @@ include <variables.scad>
 use <hull.scad>
 use <rod_connector.scad>
 use <lid.scad>
+use <motor_mount.scad>
+use <motor_mount_rudder.scad>
 
 // TODO
 // Raise hull cutout a bit
@@ -48,7 +50,7 @@ translate([hullSpacing, 0, 0]) rightHull();
 module hullRod() {
     color([1, 0, 0, 0.3])
     rotate([90, 0, 90])
-    cylinder(h = hullSpacing * 2 + hullWidth, r = hullMountHole, center = true);
+    cylinder(h = hullSpacing * 2 + hullWidth, r = hullMountHoleRadius, center = true);
 }
 
 // Hull rod horizontal front
@@ -65,16 +67,17 @@ hullRod();
 
 module motorRod() {
     color([1, 0, 0, 0.3])
-    cylinder(h = hullLength - hullMountOffsetY * 2 + hullMountWidth * 2, r = hullMountHole, center = true);
+    cylinder(h = hullLength - hullMountOffsetY * 2 + hullMountWidth * 2, r = hullMountHoleRadius, center = true);
 }
 
 // Motor rod left
-translate([-rodConnectorOffsetX, hullLength / 2, hullHeight + rodConnectorRadius * 2 + rodConnectorTopOffset])
+motorRodZ = hullHeight + rodConnectorRadius * 2 + rodConnectorTopOffset;
+translate([-motorMountMountOffsetX, hullLength / 2, motorRodZ])
 rotate([90, 0, 0])
 motorRod();
 
 // Motor rod right
-translate([rodConnectorOffsetX, hullLength / 2, hullHeight + rodConnectorRadius * 2 + rodConnectorTopOffset])
+translate([motorMountMountOffsetX, hullLength / 2, motorRodZ])
 rotate([90, 0, 0])
 motorRod();
 
@@ -83,17 +86,28 @@ motorRod();
 // ##########################################//
 
 // Front right rod connector
-translate([rodConnectorOffsetX, hullMountOffsetY, hullHeight + hullMountHeight / 2])
+translate([motorMountMountOffsetX, hullMountOffsetY, hullHeight + hullMountHeight / 2])
 rodConnector();
 
 // Front left rod connector
-translate([-rodConnectorOffsetX, hullMountOffsetY, hullHeight + hullMountHeight / 2])
+translate([-motorMountMountOffsetX, hullMountOffsetY, hullHeight + hullMountHeight / 2])
 rodConnector();
 
 // Back right rod connector
-translate([rodConnectorOffsetX, hullLength - hullMountOffsetY, hullHeight + hullMountHeight / 2])
+translate([motorMountMountOffsetX, hullLength - hullMountOffsetY, hullHeight + hullMountHeight / 2])
 rodConnector();
 
 // Back left rod connector
-translate([-rodConnectorOffsetX, hullLength - hullMountOffsetY, hullHeight + hullMountHeight / 2])
+translate([-motorMountMountOffsetX, hullLength - hullMountOffsetY, hullHeight + hullMountHeight / 2])
 rodConnector();
+
+// ##########################################//
+// Motor mount & rudder
+// ##########################################//
+
+translate([
+    0,
+    motorMountOffsetY,
+    motorRodZ + motorMountMountOffsetZ(motorMountMountOffsetX)
+])
+motorMountRudder();

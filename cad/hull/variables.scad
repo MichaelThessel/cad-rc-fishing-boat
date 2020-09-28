@@ -33,19 +33,18 @@ hullCutoutHeight = 150;
 // ##########################################//
 // Hull Mounts
 // ##########################################//
-hullMountHole = 8.5;
-hullMountHeight = 30;
-hullMountWidth = 30;
+hullMountHoleRadius = 4.25;
+hullMountHeight = 20;
+hullMountWidth = 20;
 hullMountDepth = 50;
 hullMountOffsetY = 100;
 
 // ##########################################//
 // Rod Connectors
 // ##########################################//
-rodConnectorWidth = 30;
-rodConnectorRadius = 15;
+rodConnectorWidth = 20;
+rodConnectorRadius = 10;
 rodConnectorTopOffset = 3;
-rodConnectorOffsetX = 30;
 
 // ##########################################//
 // Lid
@@ -53,3 +52,15 @@ rodConnectorOffsetX = 30;
 lidLip = 5;
 lidThickness = 3;
 lidGap = 0.4;
+
+// ##########################################//
+// Motor mount
+// ##########################################//
+motorMountMotorRadius = 35;
+motorMountMotorDepth = 100;
+motorMountThickness = 4;
+motorMountMountThickness = 5;
+motorMountMountOffsetX = 20;
+motorMountSupportHeight = 10;
+motorMountSupportExtensionY = 30;
+motorMountOffsetY = 300;
