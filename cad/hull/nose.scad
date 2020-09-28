@@ -13,7 +13,7 @@ module noseTop() {
     function parabolaTop(x, ml) = parabolaTopFunc(x) > ml ? ml : parabolaTopFunc(x);
 
     points = [
-        for (x = [-noseWidth / 2:noseWidth / 2]) [x, parabolaTop(x, noseLength - noseTopEndOffset)],
+        for (x = [-hullWidth / 2:hullWidth / 2]) [x, parabolaTop(x, noseLength - noseTopEndOffset)],
     ];
 
     hull() {
@@ -21,9 +21,9 @@ module noseTop() {
         linear_extrude(noseTopThickness)
         polygon(points);
 
-        translate([-noseWidth / 2, noseLength, noseTopOffsetZ])
+        translate([-hullWidth / 2, noseLength, noseTopOffsetZ])
         linear_extrude(noseTopThickness)
-        square([noseWidth, 1]);
+        square([hullWidth, 1]);
     }
 }
 
@@ -33,13 +33,13 @@ module noseBottom() {
     function parabolaBottom(x, ml) = parabolaBottomFunc(x) > ml ? ml : parabolaBottomFunc(x);
 
     points = [
-        for (x = [0:noseWidth / 2]) [x, parabolaBottom(x, noseLength)],
+        for (x = [0:hullWidth / 2]) [x, parabolaBottom(x, noseLength)],
         [0, noseLength]
     ];
     rotate([270, 0, 0]) rotate_extrude() polygon(points);
 }
 
 module noseTopLimit() {
-    translate([-noseWidth / 2, 0, noseTopOffsetZ + noseTopThickness])
-    cube([noseWidth, noseLength + 1, noseTopThickness * 5]);
+    translate([-hullWidth / 2, 0, noseTopOffsetZ + noseTopThickness])
+    cube([hullWidth, noseLength + 1, noseTopThickness * 5]);
 }

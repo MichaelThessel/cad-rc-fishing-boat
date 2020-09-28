@@ -30,7 +30,7 @@ module cutout() {
     translate([
         -hullCutoutWidth / 2,
         (hullLength - hullCutoutHeight) / 2,
-        noseTopOffsetZ + noseTopThickness - DIFFERENCE_FIX
+        noseHeight - DIFFERENCE_FIX
     ])
     cube([hullCutoutWidth, hullCutoutHeight, hullThickness + DIFFERENCE_FIX_2]);
 }

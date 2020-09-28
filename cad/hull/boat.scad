@@ -21,7 +21,7 @@ module liddedHull() {
     translate([
         -hullCutoutWidth / 2 - lidLip,
         (hullLength - hullCutoutHeight) / 2 - lidLip,
-        noseTopOffsetZ + noseTopThickness + lidThickness
+        noseHeight + lidThickness
     ])
     color([0, 1, 1, 0.3])
     lid();
@@ -48,7 +48,7 @@ translate([hullSpacing, 0, 0]) rightHull();
 module hullRod() {
     color([1, 0, 0, 0.3])
     rotate([90, 0, 90])
-    cylinder(h = hullSpacing * 2 + noseWidth, r = hullMountHole, center = true);
+    cylinder(h = hullSpacing * 2 + hullWidth, r = hullMountHole, center = true);
 }
 
 // Hull rod horizontal front
