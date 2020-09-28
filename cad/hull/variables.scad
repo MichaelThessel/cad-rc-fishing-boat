@@ -36,3 +36,9 @@ hullMountDepth = 50;
 hullMountPinRadius = 5;
 hullMountPinOffset = 10;
 hullMountOffsetY = 100;
+
+// Rod Connectors
+rodConnectorWidth = 30;
+rodConnectorRadius = 15;
+rodConnectorTopOffset = 2;
+rodConnectorOffsetX = 30;
